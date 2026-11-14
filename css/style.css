@@ -1,0 +1,291 @@
+/**
+ * Hollow Knight
+ * Web Design System Study
+ * Developed by Erick Cordova
+ * Week 12 - Component Library
+ **/
+
+
+/**
+ * CSS Variables
+ **/
+
+:root {
+    --color-black: #000000;
+    --color-purple: #43386f;
+    --color-white: #ffffff;
+    --color-blue-light: #787bb8;
+    --color-blue-dark: #1c2b53;
+
+    --font-main: 'Poppins', Arial, sans-serif;
+}
+
+
+/**
+ * Box Sizing
+ **/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/**
+ * Body and Typography
+ **/
+
+body {
+    margin: 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+
+/**
+ * Headings
+ **/
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-main);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+
+/**
+ * Paragraphs and Images
+ **/
+
+p {
+    font-weight: 300;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/**
+ * Component Library Layout
+ **/
+
+header,
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 40px 0 20px;
+    border-bottom: 1px solid var(--color-purple);
+}
+
+main {
+    padding: 30px 0;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+
+/**
+ * Game Features Component
+ **/
+
+.component-reference {
+    margin-bottom: 40px;
+}
+
+.component-reference img {
+    width: 100%;
+    max-width: 640px;
+}
+
+.feature-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.feature-block img {
+    width: 100%;
+    height: auto;
+}
+
+.feature-block__text h3 {
+    font-size: 34px;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.feature-block__text p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Smaller Screens */
+
+@media (max-width: 700px) {
+    .feature-block {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+/**
+ * Content Packs Component
+ **/
+
+.content-packs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.content-pack {
+    background-color: var(--color-black);
+    text-align: center;
+}
+
+.content-pack h4 {
+    font-family: var(--font-main);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 20px;
+}
+
+.content-pack img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.content-pack p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+/**
+ * Content Packs - Smaller Screens
+ **/
+
+@media (max-width: 900px) {
+    .content-packs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .content-packs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.content-packs-title {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin: 40px 0;
+}
+
+
+/**
+ * Typography Components
+ **/
+
+.type-samples {
+    border: 1px solid var(--color-purple);
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.type-sample {
+    margin-bottom: 40px;
+}
+
+.type-sample:last-child {
+    margin-bottom: 0;
+}
+
+.type-sample__label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-blue-light);
+    margin-bottom: 15px;
+}
+
+/* Main Heading */
+
+.type-sample__heading-large {
+    font-family: var(--font-main);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Subheading */
+
+.type-sample__heading-medium {
+    font-family: var(--font-main);
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Paragraph */
+
+.type-sample__paragraph {
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0;
+}
+
+/* Smaller Screens */
+
+@media (max-width: 700px) {
+    .type-sample__heading-large {
+        font-size: 32px;
+    }
+
+    .type-sample__heading-medium {
+        font-size: 26px;
+    }
+}
