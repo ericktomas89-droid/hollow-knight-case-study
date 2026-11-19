@@ -289,3 +289,65 @@ section {
         font-size: 26px;
     }
 }
+
+
+/**
+ * Color Palette Components
+ **/
+
+.color-section {
+    margin-bottom: 50px;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.color-swatch {
+    text-align: center;
+}
+
+.color-swatch__preview {
+    height: 130px;
+    border: 1px solid #666666;
+    border-radius: 6px;
+}
+
+.color-swatch h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px 0 5px;
+}
+
+.color-swatch p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+}
+
+/**
+ * Individual Color Swatches
+ **/
+
+.color-swatch__preview--black {
+    background-color: var(--color-black);
+}
+
+.color-swatch__preview--purple {
+    background-color: var(--color-purple);
+}
+
+.color-swatch__preview--white {
+    background-color: var(--color-white);
+}
+
+.color-swatch__preview--blue-light {
+    background-color: var(--color-blue-light);
+}
+
+.color-swatch__preview--blue-dark {
+    background-color: var(--color-blue-dark);
+}
